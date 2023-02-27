@@ -99,6 +99,15 @@
         </div>
       </div>
 
+      <h1>User Perceived Input Slider</h1>
+
+      <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <p>Value: <span id="demo"></span></p>
+      </div>
+
+
+
       <footer class="navbar justify-content-evenly bg-danger fixed-bottom" >
         <div class="container py-3">
           <span class="material-icons">info</span>
@@ -112,6 +121,16 @@
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
+
+    <script>
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("demo");
+      output.innerHTML = slider.value;
+      
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+      }
+      </script>
 
     <!-- Link to scripts of your own -->
     <!-- <script src="./scripts/script.js"></script> -->
