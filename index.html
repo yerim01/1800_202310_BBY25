@@ -69,8 +69,39 @@
 
       <button class="btn btn-lg btn-outline-secondary" type="button">Login/Signup</button>
 
+      <div class="pop1">
+        <button class="btn btn-lg btn-outline-secondary" type="button" onclick="openPopup1()">Share this
+          page
+        </button>
+        <!-- <button type="submit" class="btn2" onclick="openPopup()">Confirm</button> -->
+        <div class="popup1" id="popup1">
+          <h3 class="title">Share</h3>
+          <!-- <img src="images/exclamation.png" alt="exclamation mark"> -->
+          <div class="social-media">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-google"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-github"></i>
+          </div>
+          <p>Or copy link:</p>
+          <div class="field">
+            <i class="fa fa-share-alt"></i>
+            <input type="text" value="heatpro.ca/share-link">
+            <button>Copy</button>
+          </div>
+          <button type="button" onclick="closePopup1()">OK</button>
+        </div>
+
+      </div>
+
     </div>
   </div>
+
+
+
+
   <!--card groups-->
   <div class="card-group">
     <div class="card">
@@ -111,14 +142,19 @@
     <p>Value: <span id="demo"></span></p>
     <button id="confirmButton">Confirm</button>
   </div>
-  
-  <div class="pop">
+
+
+
+
+
+
+  <div class="pop2">
     <!-- <button type="submit" class="btn2" onclick="openPopup()">Confirm</button> -->
-    <div class="popup" id="popup">
+    <div class="popup2" id="popup2">
       <img src="images/exclamation.png" alt="exclamation mark">
       <h2>CAUTION!</h2>
       <p>Today is extreme hot! Please stay indoors and keep hydrated! </p>
-      <button type="button" onclick="closePopup()">OK</button>
+      <button type="button" onclick="closePopup2()">OK</button>
 
     </div>
   </div>
@@ -265,18 +301,14 @@
       output.innerHTML = this.value;
     }
 
-    confirmButton.addEventListener ("click", function (){
+    confirmButton.addEventListener("click", function () {
       var value = slider.value;
       var confirmValue = confirm("Are you sure you want to select " + value + "?");
 
       if (confirmValue) {
         if (value > 75) {
-openPopup();
+          openPopup2();
           // window.open("popup1.html", "Popup", "width=400,height=400", "openPopup()");
-        } else if (value > 50) {
-          window.open("popup2.html", "Popup", "width=400,height=400");
-        } else {
-          window.open("popup3.html", "Popup", "width=400,height=400");
         }
       } else {
         slider.value = 50; // Reset the slider to the default value if the user cancels
@@ -284,15 +316,27 @@ openPopup();
       }
     });
 
-    // for warning pop
-    let popup = document.getElementById("popup");
+    //for share popup
+    let popup1 = document.getElementById("popup1");
 
-    function openPopup() {
-      popup.classList.add("open-popup");
+    function openPopup1() {
+      popup1.classList.add("open-popup1");
     }
 
-    function closePopup() {
-      popup.classList.remove("open-popup");
+    function closePopup1() {
+      popup1.classList.remove("open-popup1");
+    }
+
+
+    // for warning pop
+    let popup2 = document.getElementById("popup2");
+
+    function openPopup2() {
+      popup2.classList.add("open-popup2");
+    }
+
+    function closePopup2() {
+      popup2.classList.remove("open-popup2");
     }
   </script>
 
