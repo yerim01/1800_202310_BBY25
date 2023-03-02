@@ -1,6 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Indie+Flower&family=Tilt+Neon&display=swap');
+
+
+h1 {
+  text-align: center;
+  color: #aa0404; 
+  font-family: 'Tilt Neon', cursive;
+  font-weight: 900;
+  
+
+
+}
+
+
 /* css for slider bar for preceived temperature. */
 .slidecontainer {
     width: 100%;
+    align-items: center
   }
   
   .slider {
@@ -13,6 +28,7 @@
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
+    align-items: center;
   }
   
   .slider:hover {
