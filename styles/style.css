@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Indie+Flower&family=Tilt+Neon&display=swap');
 
+/* css for slider bar for perceived temperature. */
 
 h1 {
   text-align: center;
   color: #aa0404;
   font-family: 'Tilt Neon', cursive;
   font-weight: 900;
-
 }
 
-/* css for slider bar for preceived temperature. */
+h3 {
+  text-align: center;
+}
+
 .slidecontainer {
   width: 100%;
   align-items: center
@@ -49,6 +52,23 @@ h1 {
   background: #aa0404;
   cursor: pointer;
 }
+
+#confirmButton {
+  background-color: #aa0404;
+  border: none;
+  color: white;
+  padding: 15px;
+  font-size: 20pt;
+  margin: 4px 2px;
+  border-radius: 5%;
+  text-align: center;
+}
+
+.slidecontainer p {
+  text-align: center;
+}
+
+
 
 /* css for share pop-up */
 
@@ -196,6 +216,21 @@ h1 {
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* icons */
