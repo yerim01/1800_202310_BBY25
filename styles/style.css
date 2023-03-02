@@ -104,10 +104,8 @@ h1 {
 }
 .social-media{
   display:flex;
-  top: 10%;
   justify-content: space-between;
   margin: 15px 15px 20px 0;
-  
 }
 
 
