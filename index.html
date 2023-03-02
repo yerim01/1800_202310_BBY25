@@ -19,7 +19,10 @@
     crossorigin="anonymous"></script>
   <!-- Other libraries go here -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+    crossorigin="anonymous"></script>
   <!-- Link to styles of your own -->
   <link rel="stylesheet" href="./styles/style.css">
 
@@ -30,7 +33,7 @@
   <!------------------------------>
   <!-- Your HTML Layout go here -->
   <!------------------------------>
-  <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">HeatPro Offical Website</a>
 
@@ -44,7 +47,7 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">General Information</a>
+            <a class="nav-link" href="general_info.html">General Information</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Emergency Contact</a>
@@ -68,8 +71,12 @@
 
     </div>
   </div>
+
+  <!--weather page-->
+  <iframe src="weather_app.html" width="100%" height="400"></iframe>
+  
   <!--card groups-->
-  <div class="card-group">
+  <!-- <div class="card-group">
     <div class="card">
       <img src="images/heatwave.jpg" class="card-img-top" alt="...">
       <div class="card-body">
@@ -92,23 +99,25 @@
       <img src="images/stroke.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Heat Stroke</h5>
-        <p class="card-text">Heat stroke is the most serious heat-related illness. It occurs when the body can no longer
+        <p class="card-text">Heat stroke is the most serious heat-related illness. It occurs when the body can no
+          longer
           control its temperature: the body's temperature rises rapidly, the sweating mechanism fails, and the body is
           unable to cool down.</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <h1>User Perceived Temperature Input</h1>
+  <h1>User Perceived Input Slider</h1>
 
   <div class="slidecontainer">
     <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
     <p>Value: <span id="demo"></span></p>
+    <button id="confirmButton">Confirm</button>
   </div>
-
+  
   <div class="pop">
-    <button type="submit" class="btn2" onclick="openPopup()">Confirm</button>
+    <!-- <button type="submit" class="btn2" onclick="openPopup()">Confirm</button> -->
     <div class="popup" id="popup">
       <img src="images/exclamation.png" alt="exclamation mark">
       <h2>CAUTION!</h2>
@@ -116,19 +125,131 @@
       <button type="button" onclick="closePopup()">OK</button>
 
     </div>
+  </div>
 
+  <div class="icons">
+    <button type="button" class="btn btn-outline-danger">
+      <i class="bi bi-info-circle"></i>
+    </button>
+
+    <button type="button" class="btn btn-outline-danger">
+      <i class="bi bi-house-door"></i>
+    </button>
+
+    <button type="button" class="btn btn-outline-danger">
+      <i class="bi bi-hospital"></i>
+    </button>
+
+    <button type="button" class="btn btn-outline-danger">
+      <i class="bi bi-person-circle"></i>
+    </button>
   </div>
 
 
-  <footer class="navbar justify-content-evenly bg-danger fixed-bottom" >
+
+  <!-- <footer class="navbar justify-content-evenly bg-danger fixed-bottom">
     <div class="container py-3">
       <span class="material-icons">info</span>
       <span class="material-icons">home</span>
       <span class="material-icons">sos</span>
       <span class="material-icons">person</span>
     </div>
-  </footer>
+  </footer> -->
+  <!-- Footer -->
 
+
+
+  <footer class="text-center text-lg-start bg-light text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div class="text-center">
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Get Help
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Guides</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Term of Use</a>
+            </p>
+            <!-- <p>
+            <a href="#!" class="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Laravel</a>
+          </p> -->
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3"></i> Burnaby, BC, CA</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              info@heatpro.ca
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 01 778 850 1234</p>
+            <p><i class="fas fa-print me-3"></i> + 01 604 850 5678</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2023 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">HeatPro.ca</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
 
   <!---------------------------------------------->
   <!-- Your own JavaScript functions go here    -->
@@ -139,11 +260,33 @@
     // for temperature slider
     var slider = document.getElementById("myRange");
     var output = document.getElementById("demo");
-    output.innerHTML = slider.value;
+    var confirmButton = document.getElementById("confirmButton");
+
+
+    // output.innerHTML = slider.value;
 
     slider.oninput = function () {
       output.innerHTML = this.value;
     }
+
+    confirmButton.addEventListener ("click", function (){
+      var value = slider.value;
+      var confirmValue = confirm("Are you sure you want to select " + value + "?");
+
+      if (confirmValue) {
+        if (value > 75) {
+openPopup();
+          // window.open("popup1.html", "Popup", "width=400,height=400", "openPopup()");
+        } else if (value > 50) {
+          window.open("popup2.html", "Popup", "width=400,height=400");
+        } else {
+          window.open("popup3.html", "Popup", "width=400,height=400");
+        }
+      } else {
+        slider.value = 50; // Reset the slider to the default value if the user cancels
+        output.innerHTML = slider.value;
+      }
+    });
 
     // for warning pop
     let popup = document.getElementById("popup");
