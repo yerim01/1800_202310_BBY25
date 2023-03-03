@@ -102,12 +102,12 @@ h1 {
   font-size: 30px;
   color:#aa0404;
 }
+
 .social-media{
   display:flex;
   justify-content: space-between;
   margin: 15px 15px 20px 0;
 }
-
 .scm-btn{
   width:50px;
   height:50px;
@@ -115,7 +115,6 @@ h1 {
   margin: 0 5px;
   /* color: #aa0404;
   background: #fff; */
-  font-size:25px;
 }
 
 .title{
