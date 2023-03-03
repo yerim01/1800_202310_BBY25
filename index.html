@@ -33,7 +33,7 @@
   <!------------------------------>
   <!-- Your HTML Layout go here -->
   <!------------------------------>
-  <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+  <nav class="navbar navbar-expand-lg navbar-light btn-danger">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">HeatPro Offical Website</a>
 
@@ -135,12 +135,13 @@
     </div>
   </div> -->
 
-  <h1>User Perceived Input Slider</h1>
+  <h1>User Perceived Temperature Input</h1>
+  <h3>Please select what the tempeature feels like for you!</h3>
 
   <div class="slidecontainer">
-    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-    <p>Value: <span id="demo"></span></p>
-    <button id="confirmButton">Confirm</button>
+    <input type="range" min="4" max="60" value="23" class="slider" id="myRange">
+    <p>Temperature   <span id="demo"></span> °C</p>
+    <button id="confirmButton" >Confirm</button>
   </div>
 
   <div class="pop2">
@@ -148,27 +149,27 @@
     <div class="popup2" id="popup2">
       <img src="images/exclamation.png" alt="exclamation mark">
       <h2>CAUTION!</h2>
-      <p>Today is extreme hot! Please stay indoors and keep hydrated! </p>
+      <p>Today is extremely hot! Please stay indoors and keep hydrated to avoid heatstroke! </p>
       <button type="button" onclick="closePopup2()">OK</button>
-
     </div>
   </div>
 
+  <hr>
   <div class="icons">
     <button type="button" class="btn btn-outline-danger">
-      <i class="bi bi-info-circle"></i>
+      <i class="bi bi-info-circle fa-6x" ></i>
     </button>
 
     <button type="button" class="btn btn-outline-danger">
-      <i class="bi bi-house-door"></i>
+      <i class="bi bi-house-door fa-6x"></i>
     </button>
 
     <button type="button" class="btn btn-outline-danger">
-      <i class="bi bi-hospital"></i>
+      <i class="bi bi-hospital fa-6x"></i>
     </button>
 
     <button type="button" class="btn btn-outline-danger">
-      <i class="bi bi-person-circle"></i>
+      <i class="bi bi-person-circle fa-6x"></i>
     </button>
   </div>
 
@@ -301,12 +302,12 @@
       var confirmValue = confirm("Are you sure you want to select " + value + "?");
 
       if (confirmValue) {
-        if (value > 75) {
+        if (value > 54) {
           openPopup2();
           // window.open("popup1.html", "Popup", "width=400,height=400", "openPopup()");
         }
       } else {
-        slider.value = 50; // Reset the slider to the default value if the user cancels
+        slider.value = 23; // Reset the slider to the default value if the user cancels
         output.innerHTML = slider.value;
       }
     });
