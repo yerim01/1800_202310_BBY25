@@ -1,29 +1,35 @@
 .btn-custom {
     padding: 30px;
     font-size: 27px;
-  }
+}
 
-  .btn_container {
-      padding-top: 10%;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      /* align-content: center;        */
-  }
+.btn_container {
+    padding-top: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* align-content: center;        */
+}
 
-  .dehydration {
-      margin-top: 15%;
-  }
+.dehydration {
+    margin-top: 15%;
+}
 
-  .hetstroke {
-      margin-top: 10%;
-  }
+.hetstroke {
+    margin-top: 10%;
+}
 
-  .child {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 20px;
-  }
+.child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info {
+    vertical-align: middle;
+    width: 130px;
+}
+
