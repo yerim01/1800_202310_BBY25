@@ -15,14 +15,16 @@ var uiConfig = {
         // Before this works, you must enable "Firestore" from the firebase console.
         // The Firestore rules must allow the user to write. 
         //------------------------------------------------------------------------------------------
-        var user = authResult.user;                            // get the user object from the Firebase authentication database
+       
+
+        var user = authResult.user;  
+        // get the user object from the Firebase authentication database
         if (authResult.additionalUserInfo.isNewUser) {         //if new user
             db.collection("users").doc(user.uid).set({         //write to firestore. We are using the UID for the ID in users collection
                    name: user.displayName,                    //"users" collection
                    email: user.email,                         //with authenticated user's ID (user.uid)
                    feelslike: "38",                      //optional default profile info      
                    humidity: "",
-                   timestamp: "",
                    lat: "",
                    lng: ""
                                              //optional default profile info

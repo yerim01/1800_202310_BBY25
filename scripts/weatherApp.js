@@ -33,6 +33,7 @@ function setPosition(position){
     getWeather(latitude, longitude);
 }
 
+
 // SHOW ERROR WHEN THERE IS AN ISSUE WITH GEOLOCATION SERVICE
 function showError(error){
     notificationElement.style.display = "block";
