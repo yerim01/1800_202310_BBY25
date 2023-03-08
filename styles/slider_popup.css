@@ -85,9 +85,10 @@ h3 {
 
 /* css for share pop-up */
 
-.pop1 {
+
+.otherfeel {
   /* background-color: #d3d3d3; */
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
 }
@@ -118,14 +119,34 @@ h3 {
 }
 
 .pop1 button {
-  width: 30%;
-  margin-top: 50px;
+  width: 35%;
+  margin-top:20px;
+  /* margin-left: 150px; */
   padding: 10px 0;
   background: #aa0404;
   color: #fff;
   border: 0;
   outline: none;
-  font-size: 18px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: absolute;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.otherfeel button {
+  width: 35%;
+  margin-top: 20px;
+  /* margin-left: 150px; */
+  padding: 10px 0;
+  background: #aa0404;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
