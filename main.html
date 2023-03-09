@@ -34,6 +34,7 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+ 
 
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -59,8 +60,7 @@
       <h1 class="display-5 fw-bold">Welcome to HeatPro</h1>
       <p class="col-md-8 fs-4">Let's see the temperature today!</p>
 
-      <button class="btn btn-lg btn-outline-secondary" type="button"
-        onclick="window.location.href = 'login2.html';">Login/Signup</button>
+        <button class="btn btn-lg btn-outline-secondary" id="loginbutton" type="button" onclick = "window.location.href = 'login2.html'; ">Login/Signup</button>
 
       <div class="pop1">
         <button class="btn btn-lg btn-outline-secondary" type="button" onclick="openPopup1()">Share this
@@ -107,6 +107,8 @@
     <input type="range" min="4" max="60" value="23" class="slider" id="myRange">
     <p>Temperature <span id="demo"></span> °C</p>
     <button id="confirmButton">Confirm</button>
+    <button id="getLocationBtn">Get Location</button>
+
   </div>
 
   <div class="pop2"> -->
@@ -157,8 +159,9 @@
   <script src="./scripts/firebaseAPI_heatpro.js"></script>
   <script src="./scripts/main.js"></script>
 
-  <!-- Link to scripts of your own -->
-  <!-- <script src="./scripts/script.js"></script> -->
+    <!-- Link to scripts of your own -->
+    <!-- <script src="./scripts/script.js"></script> -->
+
 
 </body>
 

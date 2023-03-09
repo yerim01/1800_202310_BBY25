@@ -45,6 +45,19 @@ function closePopup1() {
 // // for warning pop
 // let popup2 = document.getElementById("popup2");
 
+function openPopup2() {
+  popup2.classList.add("open-popup2");
+
+  // Add a button to the popup that redirects the user
+  var popupButton = document.createElement("button");
+  popupButton.innerText = "OK";
+  popupButton.addEventListener("click", function () {
+    // Redirect the user to a different page
+    window.location.href = "../heatindex.html";
+  });
+  popup2.appendChild(popupButton);
+}
+
 // function openPopup2() {
 //   popup2.classList.add("open-popup2");
 
@@ -73,6 +86,4 @@ function closePopup1() {
 // myButton.addEventListener("click", function () {
 //   window.location.href = "../heatindex.html";
 // });
-
-
 

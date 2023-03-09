@@ -5,6 +5,11 @@ const descElement = document.querySelector(".temperature-description p");
 const locationElement = document.querySelector(".location p");
 const notificationElement = document.querySelector(".notification");
 
+
+
+
+
+
 // App data
 const weather = {};
 
@@ -29,9 +34,31 @@ if('geolocation' in navigator){
 function setPosition(position){
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
+
+    // //geolocation connection?
+    // var currentUser;
+    // currentUser = db.collection("users").doc(user.uid)
+    // currentUser.update({
+    //     lat: latitude,
+    //     lng: longitude,
+    
+    // })
+
     
     getWeather(latitude, longitude);
 }
+// //get Latitude
+// function getLatitude() {
+//     let latitude = position.coords.latitude;
+//     console.log(latitude);
+// }
+// //get longitude
+// function getLongitude() {
+//     let longitude = position.coords.longitude;
+//     console.log(longitude);
+// }
+
+
 
 // SHOW ERROR WHEN THERE IS AN ISSUE WITH GEOLOCATION SERVICE
 function showError(error){
