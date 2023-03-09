@@ -1,3 +1,6 @@
+
+// import { getLatitude } from "/weatherApp.js";
+// import { getLongitude } from "/weatherApp.js";
 // Initialize the FirebaseUI Widget using Firebase.
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
@@ -23,11 +26,11 @@ var uiConfig = {
             db.collection("users").doc(user.uid).set({         //write to firestore. We are using the UID for the ID in users collection
                    name: user.displayName,                    //"users" collection
                    email: user.email,                         //with authenticated user's ID (user.uid)
-                   feelslike: "38",                      //optional default profile info      
-                   humidity: "",
-                   lat: "",
-                   lng: ""
-                                             //optional default profile info
+                   feelslike: 2,
+                   longitude: 0,
+                   latitude: 0
+
+                       
             }).then(function () {
                    console.log("New user added to firestore");
                    window.location.assign("main.html");       //re-direct to main.html after signup
@@ -64,7 +67,6 @@ var uiConfig = {
 };
 
 ui.start('#firebaseui-auth-container', uiConfig);
-
 
 
 

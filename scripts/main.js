@@ -25,7 +25,7 @@ confirmButton.addEventListener("click", function () {
     else {
       // slider.value = 23; // Reset the slider to the default value if the user cancels
       // output.innerHTML = slider.value;
-      window.location.href = "../heatindex.html";
+      window.location.href = "heatindex.html";
     }
   }
 });
@@ -45,6 +45,8 @@ function closePopup1() {
 // for warning pop
 let popup2 = document.getElementById("popup2");
 
+
+
 function openPopup2() {
   popup2.classList.add("open-popup2");
 
@@ -53,7 +55,7 @@ function openPopup2() {
   popupButton.innerText = "OK";
   popupButton.addEventListener("click", function () {
     // Redirect the user to a different page
-    window.location.href = "../heatindex.html";
+    window.location.href = "heatindex.html";
   });
   popup2.appendChild(popupButton);
 }
@@ -76,3 +78,55 @@ myButton.addEventListener("click", function () {
 
 
 
+
+
+
+
+
+
+
+
+
+// // Authenticate the user
+// firebase.auth().signInAnonymously().catch(function(error) {
+//     console.error("Error authenticating user: ", error);
+// });
+
+
+
+
+
+// Get the button element and add an event listener to it
+const getLocationBtn = document.getElementById('getLocationBtn');
+getLocationBtn.addEventListener('click', getLocation);
+
+
+
+
+
+function getLocation() {
+  navigator.geolocation.getCurrentPosition(function(position) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+
+      // Add the location data to the Firestore collection
+      addLocationToFirestore(latitude, longitude);
+  }, function(error) {
+      console.error("Error getting location: ", error);
+  });
+}
+
+function addLocationToFirestore(latitude, longitude) {
+  const timestamp = firebase.firestore.Timestamp.now();
+  db.collection("locations").add({
+      latitude: latitude,
+      longitude: longitude,
+      timestamp: timestamp
+  })
+  .then(function(docRef) {
+      console.log("Location added to Firestore with ID: ", docRef.id);
+  })
+  .catch(function(error) {
+      console.error("Error adding location to Firestore: ", error);
+  });
+}
