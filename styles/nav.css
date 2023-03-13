@@ -1,9 +1,23 @@
+
+
+.navbar-brand {
+  font-size: 40px;
+  padding-top: 0.6%;
+
+}
+
+#navbarNav a {
+  color: white;
+  font-size: 30px;
+}
+
 .navbar {
-    height: 80px; /* adjust the height value as needed */
+    height: 100px; /* adjust the height value as needed */
     background-color: #cf3c3c;
     color: #fff;
     display: flex;
     align-items: center;
+    justify-content: center; /* center contents horizontally */
   }
   
   .navbar ul {
@@ -26,3 +40,5 @@
     text-decoration: none;
   }
   
+
+
