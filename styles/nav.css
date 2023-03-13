@@ -1,0 +1,28 @@
+.navbar {
+    height: 80px; /* adjust the height value as needed */
+    background-color: #cf3c3c;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    margin-right: 20px;
+  }
+  
+  .navbar li:last-child {
+    margin-right: 0;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
