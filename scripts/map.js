@@ -23,14 +23,14 @@ function showMap() {
           map.addImage('eventpin', image); // Pin Icon
   
           // READING information from "events" collection in Firestore
-          db.collection('hikes').get().then(allEvents => {
+          db.collection('locations').get().then(allEvents => {
             const features = []; // Defines an empty array for information to be added to
   
             allEvents.forEach(doc => {
-              lat = doc.data().lat;
-              lng = doc.data().lng;
-              console.log(lat, lng);
-              coordinates = [lng, lat];
+              latitude = doc.data().latitude;
+              longitude = doc.data().longitude;
+              console.log(latitude, longitude);
+              coordinates = [longitude, latitude];
               console.log(coordinates);
               // Coordinates
               event_name = doc.data().name; // Event Name
