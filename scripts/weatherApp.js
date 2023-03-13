@@ -1,14 +1,10 @@
 // SELECT ELEMENTS
 const iconElement = document.querySelector(".weather-icon");
 const tempElement = document.querySelector(".temperature-value p");
+const humidityElement = document.querySelector(".humidity p");
 const descElement = document.querySelector(".temperature-description p");
 const locationElement = document.querySelector(".location p");
 const notificationElement = document.querySelector(".notification");
-
-
-
-
-
 
 // App data
 const weather = {};
@@ -16,6 +12,7 @@ const weather = {};
 weather.temperature = {
     unit : "celsius"
 }
+weather.humidity = null;
 
 // APP CONSTS AND VARS
 const KELVIN = 273;
@@ -42,9 +39,7 @@ function setPosition(position){
     //     lat: latitude,
     //     lng: longitude,
     
-    // })
-
-    
+    // })   
     getWeather(latitude, longitude);
 }
 // //get Latitude
@@ -58,8 +53,6 @@ function setPosition(position){
 //     console.log(longitude);
 // }
 
-
-
 // SHOW ERROR WHEN THERE IS AN ISSUE WITH GEOLOCATION SERVICE
 function showError(error){
     notificationElement.style.display = "block";
@@ -69,6 +62,8 @@ function showError(error){
 // GET WEATHER FROM API PROVIDER
 function getWeather(latitude, longitude){
     let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+    // let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=${weather.temperature.unit === 'celsius' ? 'metric' : 'imperial'}`;
+    // let api = 'https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric'
     
     fetch(api)
         .then(function(response){
@@ -81,6 +76,8 @@ function getWeather(latitude, longitude){
             weather.iconId = data.weather[0].icon;
             weather.city = data.name;
             weather.country = data.sys.country;
+            weather.humidity = data.main.humidity;
+
         })
         .then(function(){
             displayWeather();
@@ -91,8 +88,10 @@ function getWeather(latitude, longitude){
 function displayWeather(){
     iconElement.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
     tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
+    humidityElement.innerHTML = `Humidity: ${weather.humidity}%`;
     descElement.innerHTML = weather.description;
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
+    
 }
 
 // C to F conversion
