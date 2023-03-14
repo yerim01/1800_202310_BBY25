@@ -1,0 +1,46 @@
+
+.navbar-brand {
+  font-size: 40px;
+  padding-top: 0.6%;
+
+}
+
+#navbarNav a {
+  color: white;
+  font-size: 30px;
+  
+  
+}
+
+.navbar {
+    height: 100px; /* adjust the height value as needed */
+    background-color: #cf3c3c;
+    color: #fff;
+    
+    
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  .navbar li {
+    margin-right: 20px;
+    
+  }
+  
+  .navbar li:last-child {
+    margin-right: 0;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+
+
