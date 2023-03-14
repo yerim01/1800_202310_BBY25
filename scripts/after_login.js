@@ -17,7 +17,7 @@ confirmButton.addEventListener("click", function () {
   var confirmValue = confirm("Are you sure you want to select " + value + "?");
 
   if (confirmValue) {
-    if (value > 54) {
+    if (value > 36) {
       openPopup2();
       // window.open("popup1.html", "Popup", "width=400,height=400", "openPopup()");
     }
@@ -26,7 +26,12 @@ confirmButton.addEventListener("click", function () {
       // slider.value = 23; // Reset the slider to the default value if the user cancels
       // output.innerHTML = slider.value;
       window.location.href = "../heatindex.html";
+      // window.location.href = "../heatindex.html?temp=" + value + "humidity" + weather.humidity;
+      console.log("pass the value to new html file");
     }
+
+    //store the user selected temperature value in local storage, for heat index calculator
+    localStorage.setItem("temperature", value);
   }
 });
 
@@ -79,7 +84,7 @@ function insertNameFromFirestore(){
   // to check if the user is logged in:
   firebase.auth().onAuthStateChanged(user =>{
       if (user){
-         console.log(user.uid); // let me to know who is the user that logged in to get the UID
+         console.log("the user id is " + user.uid); // let me to know who is the user that logged in to get the UID
          currentUser = db.collection("users").doc(user.uid); // will to to the firestore and go to the document of the user
          currentUser.get().then(userDoc=>{
              //get the user name

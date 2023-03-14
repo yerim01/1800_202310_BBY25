@@ -1,17 +1,5 @@
-function displayHeatIndex() {
-    const humidi = localStorage.getItem('humidity');
-    const tempera = localStorage.getItem('temperature');
-    console.log("temperature is: " + tempera);
-    let humd = parseFloat(humidi);
-    let temp = parseFloat(tempera);
-
-
-    const heatIndexNumber = calculateHeatIndex(temp, humd);
-    console.log("heatindex is " + heatIndexNumber);
-    const heatIndexResultElement = document.getElementById("heatIndexResult");
-    heatIndexResultElement.innerHTML = `Heat Index: ${heatIndexNumber}`;
-}
-
+// heatindex.js
+const heatIndex = calculateHeatIndex(temperature, humidity);
 
 function calculateHeatIndex(temperature, humidity) {
 
@@ -22,7 +10,7 @@ function calculateHeatIndex(temperature, humidity) {
 
     // Convert temperature to Fahrenheit
     const tempF = temperature * 1.8 + 32;
-    // console.log("tempF is " + tempF);
+    console.log("tempF is " + tempF);
     // Convert humidity to a decimal
     const relHumidity = humidity / 100;
 
@@ -44,11 +32,4 @@ function calculateHeatIndex(temperature, humidity) {
 
     // Return the heat index in Celsius
     return heatIndexC.toFixed(2);
-
 }
-
-
-
-
-
-

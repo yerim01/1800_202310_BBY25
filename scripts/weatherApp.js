@@ -6,6 +6,9 @@ const descElement = document.querySelector(".temperature-description p");
 const locationElement = document.querySelector(".location p");
 const notificationElement = document.querySelector(".notification");
 
+
+// import { calculateHeatIndex } from './heat_index.js';
+
 // App data
 const weather = {};
 
@@ -64,7 +67,8 @@ function getWeather(latitude, longitude){
     let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
     // let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=${weather.temperature.unit === 'celsius' ? 'metric' : 'imperial'}`;
     // let api = 'https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric'
-    
+    // let api = 'http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;'
+   
     fetch(api)
         .then(function(response){
             let data = response.json();
@@ -91,6 +95,11 @@ function displayWeather(){
     humidityElement.innerHTML = `Humidity: ${weather.humidity}%`;
     descElement.innerHTML = weather.description;
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
+    // console.log('Temperature:', weather.temperature.value);
+    // console.log('humidity: :', weather.humidity);
+    
+    //store the humidity to local storage, in order to calculate the heat index
+    localStorage.setItem("humidity", weather.humidity);
     
 }
 
@@ -114,4 +123,5 @@ tempElement.addEventListener("click", function(){
         weather.temperature.unit = "celsius"
     }
 });
+
 
