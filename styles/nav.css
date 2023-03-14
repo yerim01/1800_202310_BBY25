@@ -9,6 +9,14 @@
   color: white;
   font-size: 30px;
   
+}
+
+#navbarNav a:hover {
+  color: yellow;
+  font-size: 30px;
+
+
+ 
   
 }
 
@@ -42,5 +50,4 @@
     text-decoration: none;
   }
   
-
 
