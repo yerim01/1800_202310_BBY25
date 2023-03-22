@@ -32,6 +32,7 @@ document.getElementById("register").addEventListener("click", (event) => {
         .add({
           name: displayName,
           email: signUpemail,
+          timestamp: timestamp
         })
         .then((docRef) => {
           console.log("Document written with ID: ", docRef.id);
