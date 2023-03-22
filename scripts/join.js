@@ -18,6 +18,7 @@ document.getElementById("register").addEventListener("click", (event) => {
   const signUpemail = document.getElementById("signUpEmail").value;
   const signUppassword = document.getElementById("signUpPassword").value;
   const displayName = document.getElementById("displayName").value;
+  const timestamp = firebase.firestore.Timestamp.now();
 
   const auth = firebase.auth();
 
