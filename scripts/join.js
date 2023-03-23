@@ -34,6 +34,7 @@ document.getElementById("register").addEventListener("click", (event) => {
         email: signUpemail,
         latitude: null,
         longitude: null,
+        timestamp: timestamp
       };
 
       // Call getLocation to get the user's current location
