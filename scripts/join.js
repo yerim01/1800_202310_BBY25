@@ -34,6 +34,7 @@ document.getElementById("register").addEventListener("click", (event) => {
         email: signUpemail,
         latitude: null,
         longitude: null,
+        timestemp: timestamp
       };
 
       // Call getLocation to get the user's current location
@@ -60,7 +61,7 @@ function getLocation() {
     navigator.geolocation.getCurrentPosition((position) => {
       const latitude = position.coords.latitude;
       const longitude = position.coords.longitude;
-      console.log(latitude, " ",longitude);
+      // console.log(latitude, " ",longitude);
       sendPosition(position); // call sendPosition() with latitude and longitude values
     });
   } else {
@@ -84,6 +85,7 @@ function sendPosition(position) {
     // Handle any errors that occur
     console.error("Error updating location data in Firebase Firestore: " + error.message);
   });
+  window.location.assign("../after_login.html");
 }
 
   //   auth
