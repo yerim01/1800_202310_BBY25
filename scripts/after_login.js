@@ -97,3 +97,8 @@ function insertNameFromFirestore(){
   })
 }
 insertNameFromFirestore();
+
+
+// geolocation
+// Initialize Firebase
+

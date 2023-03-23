@@ -19,8 +19,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
 
     <!-------------------------------------------------------->
     <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
@@ -37,32 +35,8 @@
     <!-------------------------------------------->
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <!-- <link rel="stylesheet" href="./styles/style.css"> -->
-    <!-- for map boxes -->
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
 
 
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script>
-        $(function () {
-            $("#nav").load("html/nav_beforelogin.html");
-            $("#footer").load("html/footer.html");
-        });
-    </script>
-    <style>
-        .card {
-            display: none;
-            /* hide the card by default */
-        }
-
-        .card-container {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 1;
-        }
-    </style>
 </head>
 
 <body>
@@ -70,39 +44,39 @@
     <!-- Your HTML Layout go here -->
     <!------------------------------>
 
-    <!-- our own navbar goes here -->
-    <!-- <nav id="navbarPlaceholder"></nav> -->
-    <div id="nav"></div>
-
-    <!-- the body of your page goes here -->
-    <!-- stuff -->
-    <!-- Main Body -->
-    <main>
-        <!-- MAPBOX -->
-        <h2>Map View Holder</h2>
-        <div id='map' style='width: 100%; height: 400px;'></div>
-
-        <!-- MAPBOX -->
-        <div>
-            <div class="card">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Need Suggestion?</h5>
-                <p class="card-text">map box here</p>
+    <div class="container">
+        <h2>Other User Feel:</h2>
+        <div id="details-go-here"></div>
+        <!-- Here is container for cards  -->
+        <div class="container">
+            <div id="tempCardGroup" class="row row-cols-auto">
             </div>
         </div>
-    </main>
+    </div>
 
-    <!-- our own footer goes here-->
-    <!-- <nav id="footerPlaceholder"></nav> -->
-    <!-- <div id="footer"></div> -->
+    <template id="tempCardTemplate">
+        <div class="card bg-secondary">
+            <img class="card-img-top">
+            <div class="card-body bg-light">
+                <h5 class="name">placeholder</h5>
+                <p class="time">placeholder</p>
+                <p class="email">placeholder</p>
+                <!-- <p class="season">placeholder</p>
+                <p class="scrambled">placeholder</p>
+                <p class="flooded">placeholder</p> -->
+                <br>
+                <p class="description">This card has supporting 
+                    text below as a natural lead-in to additional content.
+                </p>
+            </div>
+        </div>
+    </template>
 
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
     <script src="./scripts/firebaseAPI_heatpro.js"></script>
     <!-- <script src="./scripts/skeleton.js"></script> -->
-    <!-- <script src="./scripts/script.js"></script> -->
     <script src="./scripts/map.js"></script>
 
 </body>

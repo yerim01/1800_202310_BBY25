@@ -87,3 +87,6 @@ function openPopup2() {
 //   window.location.href = "../heatindex.html";
 // });
 
+
+
+

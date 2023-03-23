@@ -1,5 +1,6 @@
 const quotes = [{
     range: [20, 30],
+   
     quote: "It's a beautiful day outside!"
 },
 {
