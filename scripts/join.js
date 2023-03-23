@@ -43,7 +43,7 @@ document.getElementById("register").addEventListener("click", (event) => {
       collectionRef.doc(user.uid).set(userData)
         .then(() => {
           console.log("User data written to Firestore with ID: ", user.uid);
-          // window.location.assign("../after_login.html");
+          window.location.assign("../after_login.html");
         })
         .catch((error) => {
           console.error("Error adding user data to Firestore: ", error);
